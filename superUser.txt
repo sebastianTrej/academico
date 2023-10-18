@@ -1,0 +1,3 @@
+nombre: andres
+correo: andrestrejo7777@gmail.com
+password: andres 
