@@ -28,7 +28,7 @@ class identification_types(models.Model):
     deleted_at = models.DateTimeField(null=True)
 
 class cities(models.Model):
-    name = models.CharField(max_length=100, null=False)
+    name = models.CharField(max_length=110, null=False)
     abrev = models.CharField(max_length=10, null=False)
     descrip = models.CharField(max_length=10, null=False)
     id_dept = models.IntegerField(null=False)
@@ -39,7 +39,7 @@ class cities(models.Model):
 class persons(models.Model):
     id_user = models.ForeignKey(Users, on_delete=models.CASCADE)
     id_exp_city  = models.ForeignKey(cities, on_delete=models.CASCADE)
-    firs_name = models.CharField(max_length=50, null=False)
+    firs_name = models.CharField(max_length=40, null=False)
     last_name = models.CharField(max_length=50, null=False)
     id_ident_type = models.IntegerField(null=False)
     ident_number = models.CharField(max_length=15, null=False)
